@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_background"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="NEXT"
+            android:onClick="nextBtnClicked"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFirstName"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/uploadGalleryBtn" />
+
+        <Button
+            android:id="@+id/uploadGalleryBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="Upload Cover Pictures"
+            android:onClick="galleryBtnClicked"
+            android:textColor="@color/purple_700"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/captureProPicBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/captureProPicBtn"
+            app:layout_constraintTop_toBottomOf="@+id/captureProPicBtn" />
+
+        <Button
+            android:id="@+id/captureProPicBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="Take Profile Picture"
+            android:onClick="profileBtnClicked"
+            android:textColor="@color/purple_700"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFirstName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registertext" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFirstName"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="@+id/editTextFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFirstName"
+            >
+
+            <EditText
+                android:id="@+id/editTextCountryCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Area Code"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:maxLength="9"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/registertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

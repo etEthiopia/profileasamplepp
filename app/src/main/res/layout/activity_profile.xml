@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePictureView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/firstNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="First Name"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Phone"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+             />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Phone Number"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/coverSlider"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            app:auto_cycle="true"
+            app:delay="0"
+            app:period="1000" />
+
+        <Button
+            android:id="@+id/bSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/btn_bg"
+            android:drawableLeft="@android:drawable/ic_menu_revert"
+            android:drawableTint="@color/main_color"
+            android:text="Go Back"
+            android:onClick="goBackClicked"
+            android:textColor="@color/main_color"
+            android:textSize="18sp"
+            app:backgroundTint="@color/white" />
+    </LinearLayout>
+</ScrollView>
